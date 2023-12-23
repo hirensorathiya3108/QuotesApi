@@ -6,7 +6,6 @@ const connectDB = require("./db/connect");
 const PORT = process.env.PORT || 5000;
 
 const product_routes =require("./routes/quotes");
-const { connect } = require("mongoose");
 
 app.get("/", (req, res) => {
     res.send("Hi, I am live");
