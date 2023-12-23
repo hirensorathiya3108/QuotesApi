@@ -1,13 +1,14 @@
 [
     {
-        "image": "92962628-6.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/92962628-6.jpg",
+        "category":"1",
         "footerType": "0",
         "dateType": "4",
         "date": "23-12-2023",
         "dateLanguage": "1",
         "datePosition": 2,
-        "datePosX": "3",
-        "datePosY": "3",
+        "datePosX": "0",
+        "datePosY": "0",
         "dateTextFont": "1",
         "dateBgColor": "#800080",
         "dateTextColor": "#FFFFFF",
@@ -17,7 +18,8 @@
         "subDetailsColor": "#B8860B"
     },
     {
-        "image": "19264427-5.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/19264427-5.jpg",
+        "category":"1",
         "footerType": "1",
         "dateType": "1",
         "date": "23-12-2023",
@@ -34,7 +36,8 @@
         "subDetailsColor": "#778899"
     },
     {
-        "image": "80840181-4.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/80840181-4.jpg",
+        "category":"1",
         "footerType": "2",
         "dateType": "2",
         "date": "23-12-2023",
@@ -51,7 +54,8 @@
         "subDetailsColor": "#ADFF2F"
     },
     {
-        "image": "51533280-4.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/51533280-4.jpg",
+        "category":"1",
         "footerType": "3",
         "dateType": "3",
         "date": "23-12-2023",
@@ -68,7 +72,8 @@
         "subDetailsColor": "#D2691E"
     },
     {
-        "image": "92535582-4.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/92535582-4.jpg",
+        "category":"1",
         "footerType": "4",
         "dateType": "4",
         "date": "23-12-2023",
@@ -85,7 +90,8 @@
         "subDetailsColor": "#FA8072"
     },
     {
-        "image": "601922Photo_1678505161104.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/601922Photo_1678505161104.jpg",
+        "category":"1",
         "footerType": "5",
         "dateType": "5",
         "date": "23-12-2023",
@@ -102,7 +108,8 @@
         "subDetailsColor": "#ADD8E6"
     },
     {
-        "image": "499234Photo_1678292721282.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/499234Photo_1678292721282.jpg",
+        "category":"1",
         "footerType": "6",
         "dateType": "6",
         "date": "23-12-2023",
@@ -119,7 +126,8 @@
         "subDetailsColor": "#FF69B4"
     },
     {
-        "image": "19264427-5.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/19264427-5.jpg",
+        "category":"1",
         "footerType": "7",
         "dateType": "7",
         "date": "23-12-2023",
@@ -136,7 +144,8 @@
         "subDetailsColor": "#FF00FF"
     },
     {
-        "image": "80840181-4.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/80840181-4.jpg",
+        "category":"1",
         "footerType": "8",
         "dateType": "8",
         "date": "23-12-2023",
@@ -153,7 +162,8 @@
         "subDetailsColor": "#FEF0DB"
     },
     {
-        "image": "51533280-4.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/51533280-4.jpg",
+        "category":"1",
         "footerType": "9",
         "dateType": "9",
         "date": "23-12-2023",
@@ -170,7 +180,8 @@
         "subDetailsColor": "#FF7F50"
     },
     {
-        "image": "92535582-4.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/92535582-4.jpg",
+        "category":"1",
         "footerType": "10",
         "dateType": "10",
         "date": "23-12-2023",
@@ -187,7 +198,8 @@
         "subDetailsColor": "#F6A600"
     },
     {
-        "image": "92962628-6.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/92962628-6.jpg",
+        "category":"1",
         "footerType": "11",
         "dateType": "11",
         "date": "23-12-2023",
@@ -204,7 +216,8 @@
         "subDetailsColor": "#FFA500"
     },
     {
-        "image": "19264427-5.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/19264427-5.jpg",
+        "category":"1",
         "footerType": "12",
         "dateType": "12",
         "date": "23-12-2023",
@@ -221,7 +234,8 @@
         "subDetailsColor": "#FF8C00"
     },
     {
-        "image": "601922Photo_1678505161104.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/601922Photo_1678505161104.jpg",
+        "category":"1",
         "footerType": "13",
         "dateType": "13",
         "date": "23-12-2023",
@@ -238,7 +252,8 @@
         "subDetailsColor": "#FF7F50"
     },
     {
-        "image": "19264427-5.jpg",
+        "image": "https://aiafileforthunkable.com/admin-panel-photo/images/19264427-5.jpg",
+        "category":"1",
         "footerType": "13",
         "dateType": "0",
         "date": "23-12-2023",

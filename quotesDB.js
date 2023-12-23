@@ -7,6 +7,7 @@ const QuotesJson = require("./quotes.json")
 const start = async () => {
     try{
         await connectDB(process.env.MONGODB_URL);
+        await Quotes.deleteMany();
         await Quotes.create(QuotesJson);
         console.log("success");
     }catch(error){

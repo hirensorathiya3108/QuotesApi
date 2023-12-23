@@ -5,6 +5,10 @@ const quotesSchema = new mongoose.Schema({
         type: String,
         require: [true, "image must be provided"],
     },
+    category: {
+        type: Number,
+        require: [true, "category must be provided"],
+    },
     footerType: {
         type: Number,
         require: [true, "footerType must be provided"],
@@ -23,15 +27,15 @@ const quotesSchema = new mongoose.Schema({
     },
     datePosition: {
         type: Number,
-        require: [true, "datePosition must be provided"],
+        default: "-1", 
     },
     datePosX: {
         type: Number,
-        require: [true, "datePosX must be provided"],
+        default : "0",
     },
     datePosY: {
         type: Number,
-        require: [true, "datePosY must be provided"],
+        default : "0",
     },
     dateTextFont: {
         type: Number,
