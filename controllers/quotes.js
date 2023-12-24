@@ -1,62 +1,49 @@
 const Quotes = require("../models/quotes");
 const crypto = require('crypto');
 const algorithm = 'aes-256-cbc';
-const key = 'yourSecretKey'; // Replace with your secret key
-const iv = crypto.randomBytes(16);
-console.log("iv =>" + iv);
 
-// const encryptData = (data) => {
-//     const cipher = crypto.createCipheriv(algorithm, Buffer.from(key), iv);
-//     let encryptedData = cipher.update(data, 'utf-8', 'hex');
-//     encryptedData += cipher.final('hex');
-//     return encryptedData;
+// Generate a random key (32 bytes for AES-256)
+// const secretKey = crypto.randomBytes(32).toString('base64');
+// console.log('Generated Key:', secretKey);
+const secretKey = "L4G6ve5Z92Pk/UY27CJ3Qazx5MF+qe3w994IZdcRKKM=";
+const iv = "j1z+Ud2Yd3Itnbr1FLCW3w==";
+
+// Generate a random IV (16 bytes for AES-256-CBC)
+// const iv = crypto.randomBytes(16).toString('base64');
+// console.log('Generated IV:', iv);
+
+// const fixKeyLength = (key) => {
+//     const keyLength = 32; // AES-256 requires a 32-byte key
+//     const buffer = Buffer.alloc(keyLength);
+//     Buffer.from(key).copy(buffer);
+//     return buffer;
 // };
 
-// Function to encrypt data
-// function encryptData(data) {
-//     const cipher = crypto.createCipher('aes256', secretKey);
-//     let encryptedData = cipher.update(JSON.stringify(data), 'utf8', 'hex');
-//     encryptedData += cipher.final('hex');
-//     return encryptedData;
-//   }
-
-const fixKeyLength = (key) => {
-    const keyLength = 32; // AES-256 requires a 32-byte key
-    const buffer = Buffer.alloc(keyLength);
-    Buffer.from(key).copy(buffer);
-    return buffer;
-};
-
-console.log("key => " + fixKeyLength(key));
-
-const encryptData = (data) => {
-    const cipher = crypto.createCipheriv(algorithm, fixKeyLength(key), iv);
-    let encryptedData = cipher.update(data, 'utf-8', 'hex');
-    encryptedData += cipher.final('hex');
+const encryptData = (data, key, iv) => {
+    const cipher = crypto.createCipheriv(algorithm, Buffer.from(key, 'base64'), Buffer.from(iv, 'base64'));
+    let encryptedData = cipher.update(data, 'utf-8', 'base64');
+    encryptedData += cipher.final('base64');
     return encryptedData;
 };
 
-const encryptedDataFromAndroid = '...'; // Replace with the actual encrypted data
-const ivFromAndroid = '...'; // Replace with the actual IV
-
-const decryptData = (encryptedData, iv) => {
-    try {
-        const decipher = crypto.createDecipheriv(algorithm, fixKeyLength(key), iv);
-        let decryptedData = decipher.update(encryptedData, 'hex', 'utf-8');
-        decryptedData += decipher.final('utf-8');
-        return decryptedData;
-    } catch (error) {
-        console.error('Decryption error:', error);
-        return null;
-    }
+const decryptData = (encryptedData, key, iv) => {
+    const decipher = crypto.createDecipheriv(algorithm, Buffer.from(key, 'base64'), Buffer.from(iv, 'base64'));
+    let decryptedData = decipher.update(encryptedData, 'base64', 'utf-8');
+    decryptedData += decipher.final('utf-8');
+    return decryptedData;
 };
+
 
 const getAllQuotes = async (req, res) => {
     const myData = await Quotes.find(req.query);
-    const encryptedData = encryptData(JSON.stringify({ myData, success: true }));
-    const decryptedData = decryptData(encryptedData, iv);
-    res.status(200).json({ decryptedData });
+    const originalData = 'This is a secret message!';
+    const encryptedData = encryptData(JSON.stringify(myData), secretKey, iv);
+    console.log('Encrypted Data:', encryptedData);
+    const decryptedData = decryptData(encryptedData, secretKey, iv);
     console.log('Decrypted Data:', decryptedData);
+    res.status(200).json({ encryptedData });
+
+
     // const myData = await Quotes.find(req.query);
     // res.status(200).json({ myData });
 };
