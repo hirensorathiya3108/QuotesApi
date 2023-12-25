@@ -37,11 +37,10 @@ const decryptData = (encryptedData, key, iv) => {
 const getAllQuotes = async (req, res) => {
     const myData = await Quotes.find(req.query);
     const originalData = 'This is a secret message!';
-    const encryptedData = encryptData(JSON.stringify(myData), secretKey, iv);
-    console.log('Encrypted Data:', encryptedData);
-    const decryptedData = decryptData(encryptedData, secretKey, iv);
+    const quotes = encryptData(JSON.stringify(myData), secretKey, iv);
+    console.log('Encrypted Data:', quotes);
+    const decryptedData = decryptData(quotes, secretKey, iv);
     console.log('Decrypted Data:', decryptedData);
-    res.status(200).json({ encryptedData });
     const response = {
         success: true,
         quotes
