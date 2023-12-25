@@ -27,15 +27,15 @@ const quotesSchema = new mongoose.Schema({
     },
     datePosition: {
         type: Number,
-        default: "-1", 
+        default: -1, 
     },
     datePosX: {
         type: Number,
-        default : "0",
+        default : 0,
     },
     datePosY: {
         type: Number,
-        default : "0",
+        default : 0,
     },
     dateTextFont: {
         type: Number,

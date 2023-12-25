@@ -42,6 +42,16 @@ const getAllQuotes = async (req, res) => {
     const decryptedData = decryptData(encryptedData, secretKey, iv);
     console.log('Decrypted Data:', decryptedData);
     res.status(200).json({ encryptedData });
+    const response = {
+        success: true,
+        quotes
+    };
+
+    try {
+        res.status(200).json(response);
+    } catch (error) {
+        res.status(500).json({ success: false, error: 'Internal Server Error' });
+    }
 
 
     // const myData = await Quotes.find(req.query);
