@@ -46,7 +46,7 @@ const getAllQuotes = async (req, res) => {
     const decryptedData = decryptData(encryptResponseData, secretKey, iv);
     console.log('Decrypted Data:', decryptedData);
     try {
-        res.status(200).json(encryptData);
+        res.status(200).json(encryptResponseData);
     } catch (error) {
         res.status(500).json({ success: false, error: 'Internal Server Error' });
     }
