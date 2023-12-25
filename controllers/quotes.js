@@ -35,19 +35,18 @@ const decryptData = (encryptedData, key, iv) => {
 
 
 const getAllQuotes = async (req, res) => {
-    const myData = await Quotes.find(req.query);
-    const originalData = 'This is a secret message!';
-    const quotes = encryptData(JSON.stringify(myData), secretKey, iv);
-    console.log('Encrypted Data:', quotes);
-    const decryptedData = decryptData(quotes, secretKey, iv);
-    console.log('Decrypted Data:', decryptedData);
+    const quotes = await Quotes.find(req.query);
     const response = {
         success: true,
         quotes
     };
-
+    const originalData = 'This is a secret message!';
+    const encryptData = encryptData(JSON.stringify(response), secretKey, iv);
+    console.log('Encrypted Data:', encryptData);
+    const decryptedData = decryptData(encryptData, secretKey, iv);
+    console.log('Decrypted Data:', decryptedData);
     try {
-        res.status(200).json(response);
+        res.status(200).json(encryptData);
     } catch (error) {
         res.status(500).json({ success: false, error: 'Internal Server Error' });
     }
