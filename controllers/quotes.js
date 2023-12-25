@@ -38,7 +38,7 @@ const getAllQuotes = async (req, res) => {
     const quotes = await Quotes.find(req.query);
     const response = {
         success: true,
-        quotes
+        quotes: quotes
     };
     const originalData = 'This is a secret message!';
     const encryptResponseData = encryptData(JSON.stringify(response), secretKey, iv);
