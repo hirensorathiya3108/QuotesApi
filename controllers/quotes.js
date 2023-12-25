@@ -41,9 +41,9 @@ const getAllQuotes = async (req, res) => {
         quotes
     };
     const originalData = 'This is a secret message!';
-    const encryptData = encryptData(JSON.stringify(response), secretKey, iv);
-    console.log('Encrypted Data:', encryptData);
-    const decryptedData = decryptData(encryptData, secretKey, iv);
+    const encryptResponseData = encryptData(JSON.stringify(response), secretKey, iv);
+    console.log('Encrypted Data:', encryptResponseData);
+    const decryptedData = decryptData(encryptResponseData, secretKey, iv);
     console.log('Decrypted Data:', decryptedData);
     try {
         res.status(200).json(encryptData);
